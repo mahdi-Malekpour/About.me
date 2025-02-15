@@ -1,28 +1,19 @@
 
-:root{
-    --color: #00FCFF;
-}
 body{
       
 font-family:"Baloo Bhaijaan 2";
-            background-image: url('Bg.jpg');
-            background-size: cover;
-            background-position: center; /* عکس را در مرکز صفحه قرار می‌دهد */
-            background-repeat: no-repeat; /* از تکرار عکس جلوگیری می‌کند */
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-   color: #272727;
+background-color: #111519;
+       color: #272727;
 }
 .header{
     background-color:rgba(250,250,250,0.04) ;
 backdrop-filter: blur(8px);
-width: 330px;
+
 height: 110px;
 border-radius: 12px;
 display: flex;
 justify-content: space-between;
-margin-inline: auto;
+margin-inline: 16px;
 padding: 12px;
 align-items: center;
 }
@@ -47,7 +38,7 @@ color: #fff;
     font-size: 12px;
 }
 .me {
- background-color:rgba(250,250,250,0.04) ;
+ background-color:rgba(250,250,250,0.03) ;
 backdrop-filter: blur(6px);
 
     
@@ -88,4 +79,16 @@ border-radius: 4px ;
 a{
     color: #fff;
 text-decoration: none;
+}
+.log,.go{
+    
+}
+@media screen and (min-width:410px){
+
+.header{
+    
+justify-content: none;
+gap: 12px;
+}
+
 }
