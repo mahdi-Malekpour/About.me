@@ -1,102 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="طراحی سایت مهدی ملک پور,محمد مهدی ملک پور, سبزلرن, محد مهدی ملک پور">
-    <meta name="author" content="محمد مهدی ملک پور">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="google-site-verification" content="5kzFPCJaM8BgCieaPYiUv2pG--rugOhoTBVLIZR0AxQ" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-    <title>محمد مهدی ملک پور | طراح و توسعه‌دهنده وب</title>
-    <meta name="description" content="محمد مهدی ملک پور، طراح و توسعه‌دهنده وب، متولد ۱۳۸۸. آموزش‌های خود را از سبزلرن شروع کرده‌ام و در حال بهبود مهارت‌هایم در طراحی وب هستم.">
- <link rel="icon" type="image/x-icon" href="Prof.jpg">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>محمدمهدی ملک‌پور | توسعه‌دهنده وب و هوش مصنوعی</title>
+  <meta name="description" content="محمدمهدی ملک‌پور — توسعه‌دهنده وب و هوش مصنوعی. بنیان‌گذار دیپومند، دستیار پزشکی فارسی. نمونه‌کارها، مهارت‌ها و راه‌های تماس." />
+  <meta name="keywords" content="محمدمهدی ملک‌پور, دیپومند, هوش مصنوعی, توسعه‌دهنده, وب, یادگیری ماشین, پزشکی دیجیتال" />
+  <link rel="canonical" href="https://mahdi-malekpour.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="محمدمهدی ملک‌پور | توسعه‌دهنده وب و هوش مصنوعی" />
+  <meta property="og:description" content="بنیان‌گذار دیپومند — دستیار پزشکی فارسی با هوش مصنوعی. پروژه‌ها و مهارت‌ها." />
+  <meta property="og:image" content="images/og-personal.jpg" />
+  <meta property="og:url" content="https://mahdi-malekpour.github.io/" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "محمدمهدی ملک‌پور",
+    "url": "https://mahdi-malekpour.github.io/",
+    "sameAs": [
+      "https://github.com/mahdi-malekpour",
+      "https://instagram.com/mahdiimalekpour"
+    ],
+    "jobTitle": "توسعه‌دهنده وب و هوش مصنوعی",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "دیپومند",
+      "url": "https://mahdi-malekpour.github.io/deepomand/"
+    }
+  }
+  </script>
+
+  <!-- فونت -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#6c63ff;
+      --primary-dark:#564fd1;
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Vazir, sans-serif}
+    body{background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+    /* Header */
+    header.hero{
+      background:#fff;
+      color:var(--text);
+      padding:3rem 1rem;
+      text-align:center;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .hero h1{font-size:2rem;margin-bottom:.5rem;color:var(--primary-dark)}
+    .hero p.lead{color:var(--muted);max-width:600px;margin:0 auto}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;font-weight:600;margin:.5rem 0}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid var(--primary);color:var(--primary)}
+
+    /* Sections */
+    section{padding:3rem 0}
+    .section-title{text-align:center;color:var(--primary);font-size:1.4rem;margin-bottom:1.5rem}
+    .card{background:var(--card);border-radius:12px;padding:1.2rem;box-shadow:0 6px 20px rgba(17,24,39,0.04)}
+
+    /* about */
+    .about-grid{display:grid;grid-template-columns:280px 1fr;gap:1.5rem;align-items:center}
+    .about-avatar{width:100%;max-width:240px;border-radius:12px;object-fit:cover}
+    .muted{color:var(--muted);font-size:.95rem}
+
+    /* projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .project{padding:1rem;border-radius:10px;background:var(--card);box-shadow:0 6px 20px rgba(17,24,39,0.04)}
+    .project h4{margin-bottom:.5rem;color:var(--primary-dark)}
+    .project p{color:var(--muted);font-size:.95rem}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 300px;gap:1rem}
+    .contact-form input,.contact-form textarea{width:100%;padding:.7rem;border:1px solid #e6e9ef;border-radius:8px;margin-bottom:.6rem;font-family:inherit}
+    .contact-form button{background:var(--primary);color:white;padding:.7rem 1rem;border-radius:8px;border:none;cursor:pointer}
+
+    /* footer */
+    footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+    /* responsive */
+    @media(max-width:880px){
+      .about-grid{grid-template-columns:1fr;text-align:center}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
-<body dir="rtl">
-    <header class="header">
-        <div class="rbox">
-            <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/300/external-account-e-commerce-flaticons-flat-flat-icons.png" alt="پروفایل محمد مهدی ملک پور - طراح و توسعه‌دهنده وب" />
-        </div>
-        <div class="lbox">
-
-            <h1>محمد مهدی ملک پور هستم</h1>
-            <p>
-                طراح و توسعه دهنده وبسایت
-            </p>
-        </div>
-    </header>
-    <main><div class="me">
-        <h4>آشنایی کوتاه با من</h4>
-
-        <p>
-            سلام! من متولد ۳۱ فروردین ۱۳۸۸ هستم و در استان آذربایجان شرقی به دنیا  آمدم. به طراحی سایت علاقه‌مند شدم و آموزش‌های خودم رو از وب‌سایت سبزلرن شروع کردم. تازه وارد این حوزه شده‌ام و دارم تلاش می‌کنم تا مهارت‌هایم رو در زمینه طراحی وب بهبود ببخشم. امیدوارم بتونم در این مسیر پیشرفت کنم و پروژه های جالبی خلق کنم! 😊
-        </p>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <h1>محمدمهدی ملک‌پور</h1>
+      <p class="lead">توسعه‌دهنده وب و هوش مصنوعی | بنیان‌گذار دیپومند</p>
     </div>
-        <div class="me">
-            <h4>مهارت های من</h4>
-            <div class="jobs">
-                <span>HTML</span>
-                <img class="logo" src="https://img.icons8.com/color/48/html-5.png" alt="مهارت اچ تی ام ال محمد مهدی ملک پور" />
-            </div>
-            <div class="jobs">
-                <span>CSS</span>
-                <img class="logo" src="https://img.icons8.com/color/48/css3.png" alt="مهارت سی اس اس محمد مهدی ملک پور" />
-            </div>
-            <div class="jobs">
-                <span>JavaScript</span>
-                <img class="logo" src="https://img.icons8.com/color/48/javascript.png" alt="مهارت جاوااسکریپت محمد مهدی ملک پور" />
-            </div>
- <div class="jobs">
-                <span>vue js</span>
-                <img class="logo" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-color-tal-revivo.png" alt="مهارت ویو جی اس محمد مهدی ملک پور" />
-            </div>
+  </header>
 
+  <main class="container">
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="section-title">درباره من</h2>
+      <div class="card about-grid">
+        <img class="about-avatar" src="images/founder-mmp.jpg" alt="محمدمهدی ملک‌پور" />
+        <div>
+          <h3>سلام! 👋</h3>
+          <p class="muted">من محمدمهدی هستم، توسعه‌دهنده وب و هوش مصنوعی. دیپومند رو از سال ۲۰۲۳ راه‌اندازی کردم تا دسترسی فارسی‌زبان‌ها به اطلاعات پزشکی راحت‌تر بشه.</p>
+          <p style="margin-top:.6rem">مهارت‌ها: HTML, CSS, JavaScript, Vue.js, Python, Machine Learning</p>
+          <p style="margin-top:.8rem"><strong>ایمیل:</strong> <a href="mailto:mahdi.me.14.m@gmail.com">mahdi.me.14.m@gmail.com</a></p>
+          <p style="margin-top:.3rem"><strong>اینستاگرام:</strong> <a href="https://instagram.com/mahdiimalekpour" target="_blank">@mahdiimalekpour</a></p>
         </div>
-        <div class="me">
-            <h4>ارتباط با من</h4>
-            <div class="jobs">
-                <a href="https://t.me/Mahdi_88_web"> <span>Mahdi_88_web</span></a>
-                <img class="logo" src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="ارتباط با محمد مهدی ملک پور در تلگرام" />
-            </div>
-            <div class="jobs">
-                <a href="https://www.instagram.com/mahdi_malekpour1"><span>mahdi_malekpour1</span></a>
-                <img class="logo" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="ارتباط با محمد مهدی ملک پور در اینستاگرام" />
-            </div>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">نمونه‌کارها</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>دیپومند — دستیار پزشکی</h4>
+          <p>چت‌بات فارسی که اطلاعات بیماری‌ها و داروها رو توضیح می‌ده.</p>
+          <p class="muted"><a href="https://mahdi-malekpour.github.io/deepomand/" target="_blank">مشاهده آنلاین</a></p>
         </div>
 
-    </main>
-<footer>
-    <div class="me">
-    <h4>مقالات</h4>
+        <div class="project">
+          <h4>پروژه‌های وب</h4>
+          <p>نمونه‌کارهایی با Vue.js, HTML, CSS و جاوااسکریپت.</p>
+        </div>
 
-<div class="jobs">
+        <div class="project">
+          <h4>یادگیری ماشین</h4>
+          <p>مدل‌های پردازش زبان و پروتوتایپ‌های ML برای پروژه‌های پزشکی.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">تماس</h2>
+      <div class="card contact-grid">
+  <form class="contact-form" action="mailto:mahdi.me.14.m@gmail.com" method="post" enctype="text/plain">
+    <p class="muted">برای همکاری یا پرسش پیام بدید:</p>
 
-<a href="magalehAi.html"><span class="log">هوش مصنوعی کلا چیست؟ از زبان خود هوش مصنوعی</span>
-</a>
-</div>
-</div>
-</footer>
-<script src="script.js" type="application/javascript" charset="utf-8"></script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "محمد مهدی ملک پور",
-            "jobTitle": "طراح و توسعه‌دهنده وب",
-            "birthDate": "2009-04-20",
-            "description": "محمد مهدی ملک پور، طراح و توسعه‌دهنده وب، متولد ۱۳۸۸. آموزش‌های خود را از سبزلرن شروع کرده‌ام و در حال بهبود مهارت‌هایم در طراحی وب هستم.",
-            "url": "https://example.com",
-            "sameAs": [
-                "https://t.me/Mahdi_88_web",
-                "https://www.instagram.com/mahdi_malekpour1"
-            ]
-        }
-    </script>
+    <input type="text" id="name" name="name" placeholder="نام شما" required />
+    <input type="email" id="email" name="email" placeholder="ایمیل" required />
+    <textarea id="message" name="message" rows="5" placeholder="پیام شما" required></textarea>
+
+    <button type="submit">ارسال پیام</button>
+  </form>
+</div>      <aside style="padding:1rem">
+          <h4>راه‌های ارتباطی</h4>
+          <p class="muted">ایمیل: <a href="mailto:mahdi.me.14.m@gmail.com">mahdi.me.14.m@gmail.com</a></p>
+          <p class="muted">اینستاگرام: <a href="https://instagram.com/mahdiimalekpour" target="_blank">@mahdiimalekpour</a></p>
+          <p class="muted">گیت‌هاب: <a href="https://github.com/mahdi-malekpour" target="_blank">github.com/mahdi-malekpour</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 محمدمهدی ملک‌پور</p>
+    </div>
+  </footer>
 </body>
 </html>
