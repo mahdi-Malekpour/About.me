@@ -1,178 +1,595 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>محمدمهدی ملک‌پور | توسعه‌دهنده وب و هوش مصنوعی</title>
-  <meta name="description" content="محمدمهدی ملک‌پور — توسعه‌دهنده وب و هوش مصنوعی. بنیان‌گذار دیپومند، دستیار پزشکی فارسی. نمونه‌کارها، مهارت‌ها و راه‌های تماس." />
-  <meta name="keywords" content="محمدمهدی ملک‌پور, دیپومند, هوش مصنوعی, توسعه‌دهنده, وب, یادگیری ماشین, پزشکی دیجیتال" />
-  <link rel="canonical" href="https://mahdi-malekpour.github.io/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="محمدمهدی ملک‌پور | توسعه‌دهنده وب و هوش مصنوعی" />
-  <meta property="og:description" content="بنیان‌گذار دیپومند — دستیار پزشکی فارسی با هوش مصنوعی. پروژه‌ها و مهارت‌ها." />
-  <meta property="og:image" content="images/og-personal.jpg" />
-  <meta property="og:url" content="https://mahdi-malekpour.github.io/" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "محمدمهدی ملک‌پور",
-    "url": "https://mahdi-malekpour.github.io/",
-    "sameAs": [
-      "https://github.com/mahdi-malekpour",
-      "https://instagram.com/mahdiimalekpour"
-    ],
-    "jobTitle": "توسعه‌دهنده وب و هوش مصنوعی",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "دیپومند",
-      "url": "https://mahdi-malekpour.github.io/deepomand/"
-    }
-  }
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محمدمهدی ملک‌پور | توسعه‌دهنده وب و ماشین لرنینگ</title>
+  <meta name="description" content="توسعه‌دهنده وب و ماشین لرنینگ | Python, Vue.js, FastAPI | پروژه‌های عملی AI" />
+  <!-- در بخش <head> سایت، بعد از <meta>ها قرار بدید -->
+<link rel="shortcut icon" href="profile-img.ico" type="image/x-icon">
+<link rel="icon" href="profile-img.ico" type="image/x-icon">
   <!-- فونت -->
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
-    :root{
-      --primary:#6c63ff;
-      --primary-dark:#564fd1;
-      --bg:#f9fafb;
-      --card:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
+    /* Reset ساده */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    *{box-sizing:border-box;margin:0;padding:0;font-family:Vazir, sans-serif}
-    body{background:var(--bg);color:var(--text);line-height:1.7}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
-
-    /* Header */
-    header.hero{
-      background:#fff;
-      color:var(--text);
-      padding:3rem 1rem;
-      text-align:center;
-      border-bottom:1px solid #e5e7eb;
+    
+    body {
+      font-family: Vazir, sans-serif;
+      background: #f8fafc;
+      color: #334155;
+      line-height: 1.6;
     }
-    .hero h1{font-size:2rem;margin-bottom:.5rem;color:var(--primary-dark)}
-    .hero p.lead{color:var(--muted);max-width:600px;margin:0 auto}
-    .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;font-weight:600;margin:.5rem 0}
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-ghost{background:transparent;border:1px solid var(--primary);color:var(--primary)}
-
-    /* Sections */
-    section{padding:3rem 0}
-    .section-title{text-align:center;color:var(--primary);font-size:1.4rem;margin-bottom:1.5rem}
-    .card{background:var(--card);border-radius:12px;padding:1.2rem;box-shadow:0 6px 20px rgba(17,24,39,0.04)}
-
-    /* about */
-    .about-grid{display:grid;grid-template-columns:280px 1fr;gap:1.5rem;align-items:center}
-    .about-avatar{width:100%;max-width:240px;border-radius:12px;object-fit:cover}
-    .muted{color:var(--muted);font-size:.95rem}
-
-    /* projects */
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
-    .project{padding:1rem;border-radius:10px;background:var(--card);box-shadow:0 6px 20px rgba(17,24,39,0.04)}
-    .project h4{margin-bottom:.5rem;color:var(--primary-dark)}
-    .project p{color:var(--muted);font-size:.95rem}
-
-    /* contact */
-    .contact-grid{display:grid;grid-template-columns:1fr 300px;gap:1rem}
-    .contact-form input,.contact-form textarea{width:100%;padding:.7rem;border:1px solid #e6e9ef;border-radius:8px;margin-bottom:.6rem;font-family:inherit}
-    .contact-form button{background:var(--primary);color:white;padding:.7rem 1rem;border-radius:8px;border:none;cursor:pointer}
-
-    /* footer */
-    footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.95rem}
-
-    /* responsive */
-    @media(max-width:880px){
-      .about-grid{grid-template-columns:1fr;text-align:center}
-      .contact-grid{grid-template-columns:1fr}
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #4f46e5;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: #4f46e5;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    
+    /* هیرو - ساده و موبایل‌فرست */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    }
+    
+    .hero-content {
+      text-align: center;
+      width: 100%;
+    }
+    
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+    
+    .hero .title {
+      font-size: 1.2rem;
+      color: #4f46e5;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #64748b;
+      font-size: 1.1rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary {
+      background: #4f46e5;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #4338ca;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: #4f46e5;
+      border: 2px solid #4f46e5;
+    }
+    
+    .btn-secondary:hover {
+      background: #4f46e5;
+      color: white;
+    }
+    
+    /* مهارت‌های واقعی شما */
+    .skills {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-top: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .skill-category {
+      margin-bottom: 2rem;
+    }
+    
+    .skill-category h3 {
+      color: #4f46e5;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    
+    .tag {
+      background: #e0e7ff;
+      color: #4f46e5;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    /* مدرک‌ها */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .cert-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .cert-img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      background: #f8fafc;
+      padding: 0.5rem;
+    }
+    
+    /* پروژه‌ها */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    /* تماس ساده */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: 2rem auto 0;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      background: #4f46e5;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    
+    /* فوتر */
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 0;
+      margin-top: 3rem;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background: #4f46e5;
+      transform: translateY(-3px);
+    }
+    
+    /* موبایل‌فرست واقعی */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero .title {
+        font-size: 1.1rem;
+      }
+      
+      section {
+        padding: 3rem 0;
+      }
+      
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .skill-tags {
+        justify-content: center;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .btn {
+        display: block;
+        margin: 0.5rem auto;
+        width: 80%;
+        max-width: 250px;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
+  <!-- هیرو -->
+  <section class="hero">
+    <div class="container hero-content">
+      <!-- عکس پروفایل جدید خودت رو اینجا قرار بده -->
+      <img src="profile-img.jpg" alt="محمدمهدی ملک‌پور" class="profile-img">
+      
       <h1>محمدمهدی ملک‌پور</h1>
-      <p class="lead">توسعه‌دهنده وب و هوش مصنوعی | بنیان‌گذار دیپومند</p>
+      <p class="title">توسعه‌دهنده وب و ماشین لرنینگ</p>
+      
+      <p>
+        تمرکز روی پروژه‌های عملی پایتون و وب. تجربه در ساخت ربات‌های تلگرام با AI و مدل‌های تشخیص احساسات متن.
+      </p>
+      
+      <div>
+        <a href="#projects" class="btn btn-primary">پروژه‌های من</a>
+        <a href="#contact" class="btn btn-secondary">ارتباط با من</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main class="container">
-    <!-- ABOUT -->
-    <section id="about">
-      <h2 class="section-title">درباره من</h2>
-      <div class="card about-grid">
-      <center>
-          <img class="about-avatar" src="images/founder-mmp.jpg" alt="محمدمهدی ملک‌پور" />
-     
-      </center>     <div>
-          <h3>سلام! 👋</h3>
-          <p class="muted">من محمدمهدی هستم، توسعه‌دهنده وب و هوش مصنوعی. دیپومند رو از سال ۲۰۲۵ راه‌اندازی کردم تا دسترسی فارسی‌زبان‌ها به اطلاعات پزشکی راحت‌تر بشه.</p>
-          <p style="margin-top:.6rem">مهارت‌ها: HTML, CSS, JavaScript, Vue.js, Python, Machine Learning</p>
-          <p style="margin-top:.8rem"><strong>ایمیل:</strong> <a href="mailto:mahdi.me.14.m@gmail.com">mahdi.me.14.m@gmail.com</a></p>
-          <p style="margin-top:.3rem"><strong>اینستاگرام:</strong> <a href="https://instagram.com/mahdiimalekpour" target="_blank">@mahdiimalekpour</a></p>
+  <!-- درباره من -->
+  <section class="container">
+    <h2>درباره من</h2>
+    <div class="skills">
+      <p style="margin-bottom: 1.5rem; text-align: center; font-size: 1.1rem;">
+        من محمدمهدی ملک‌پور هستم. توسعه‌دهنده‌ای که روی <strong>پروژه‌های عملی</strong> تمرکز دارم. 
+        از کدنویسی وب تا ساخت مدل‌های ساده ماشین لرنینگ برای حل مسائل واقعی.
+      </p>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-code"></i> توسعه وب</h3>
+        <div class="skill-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Vue.js</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">REST APIs</span>
         </div>
       </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2 class="section-title">نمونه‌کارها</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <h4>دیپومند — دستیار پزشکی</h4>
-          <p>چت‌بات فارسی که اطلاعات بیماری‌ها و داروها رو توضیح می‌ده.</p>
-          <p class="muted"><a href="https://mahdi-malekpour.github.io/deepomand/" target="_blank">مشاهده آنلاین</a></p>
-        </div>
-
-        <div class="project">
-          <h4>پروژه‌های وب</h4>
-          <p>نمونه‌کارهایی با Vue.js, HTML, CSS و جاوااسکریپت.</p>
-        </div>
-
-        <div class="project">
-          <h4>یادگیری ماشین</h4>
-          <p>مدل‌های پردازش زبان و پروتوتایپ‌های ML برای پروژه‌های پزشکی.</p>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-robot"></i> پایتون و ماشین لرنینگ</h3>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Telegram Bots</span>
+          <span class="tag">NLP پایه</span>
+          <span class="tag">FastAPI</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="section-title">تماس</h2>
-      <div class="card contact-grid">
-  <form class="contact-form" action="mailto:mahdi.me.14.m@gmail.com" method="post" enctype="text/plain">
-    <p class="muted">برای همکاری یا پرسش پیام بدید:</p>
-
-    <input type="text" id="name" name="name" placeholder="نام شما" required />
-    <input type="email" id="email" name="email" placeholder="ایمیل" required />
-    <textarea id="message" name="message" rows="5" placeholder="پیام شما" required></textarea>
-
-    <button type="submit">ارسال پیام</button>
-  </form>
-</div>      <aside style="padding:1rem">
-          <h4>راه‌های ارتباطی</h4>
-          <p class="muted">ایمیل: <a href="mailto:mahdi.me.14.m@gmail.com">mahdi.me.14.m@gmail.com</a></p>
-          <p class="muted">اینستاگرام: <a href="https://instagram.com/mahdiimalekpour" target="_blank">@mahdiimalekpour</a></p>
-          <p class="muted">گیت‌هاب: <a href="https://github.com/mahdi-malekpour" target="_blank">github.com/mahdi-malekpour</a></p>
-        </aside>
+  <!-- مدرک‌ها -->
+  <section class="container">
+    <h2>مدرک‌های من</h2>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <!-- عکس مدرک اول -->
+        <img src="cert/Certificate-1.jpg" alt="مدرک پایتون" class="cert-img">
+        <h3>پایتون</h3>
+        <p>دوره آنلاین | ۲۰۲۶</p>
       </div>
-    </section>
-  </main>
+      
+      <div class="cert-card">
+        <!-- عکس مدرک دوم -->
+        <img src="cert/Data_Science_Analytics.jpg" alt="مدرک علوم داده" class="cert-img">
+        <h3>علم داده | data since</h3>
+        <p>دوره آنلاین از شرکت HP 2026</p>
+      </div>
+      
+      <div class="cert-card">
+        <!-- عکس مدرک سوم -->
+        <img src="cert/1767599370-default.jpeg" alt="مدرک پایتون" class="cert-img">
+        <h3>پایتون مقدماتی</h3>
+        <p>دوره آنلاین پلتفرم ایران دیجیتال</p>
+      </div>
+      
+      <div class="cert-card">
+        <!-- عکس مدرک چهارم -->
+        <img src="cert/Certificate-2 (1).jpg" alt="مدرک هوش مصنوعی" class="cert-img">
+        <h3>هوش مصنوعی</h3>
+        <p>دوره آنلاین ۲۰۲۶</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- پروژه‌ها -->
+  <section id="projects" class="container">
+    <h2>پروژه‌های من</h2>
+    <div class="projects-grid">
+      <!-- پروژه 1 -->
+      <div class="project-card">
+        <h3>ربات تلگرام تشخیص احساسات</h3>
+        <p>ربات هوشمندی که احساسات متن فارسی رو تشخیص می‌ده (شاد، غمگین، عصبانی و...).</p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Telegram API</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">NLP</span>
+        </div>
+        <a href="https://t.me/nlp_mahdiBot" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">مشاهده ربات</a>
+    
+      </div>
+      
+      <!-- پروژه 2 -->
+      <div class="project-card">
+        <h3>دیپومند</h3>
+        <p>دستیار پزشکی فارسی برای پاسخ به سوالات رایج. تمرکز روی رابط کاربری ساده و تجربه کاربری خوب.</p>
+        <div class="project-tags">
+          <span class="tag">Vue.js</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">CSS</span>
+          <span class="tag">REST API</span>
+        </div>
+        <a href="https://mahdi-malekpour.github.io/deepomand/" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">مشاهده آنلاین</a>
+      </div>
+      
+      <!-- پروژه 3 -->
+      <div class="project-card">
+        <h3>وب‌سایت شخصی</h3>
+        <p>همین سایت! طراحی شده با HTML/CSS خالص، کاملاً ریسپانسیو و سریع.</p>
+        <div class="project-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">ریسپانسیو</span>
+        </div>
+      </div>
+      
+      <!-- پروژه 4 -->
+      <div class="project-card">
+        <h3>مدل پیش‌بینی ساده</h3>
+        <p>مدل ماشین لرنینگ برای پیش‌بینی‌های پایه با استفاده از scikit-learn و FastAPI.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">REST</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تماس -->
+  <section id="contact" class="container">
+    <h2>ارتباط با من</h2>
+    <p style="text-align: center; margin-bottom: 2rem; color: #64748b;">
+      برای همکاری، سوال یا صحبت درباره پروژه‌ها در تماس باشید
+    </p>
+    
+    <div class="contact-links">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div>
+          <h4>ایمیل مستقیم</h4>
+          <p><a href="mailto:mahdi.me.14.m@gmail.com">mahdi.me.14.m@gmail.com</a></p>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fab fa-github"></i>
+        </div>
+        <div>
+          <h4>گیت‌هاب</h4>
+          <p><a href="https://github.com/mahdi-malekpour" target="_blank">github.com/mahdi-malekpour</a></p>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fab fa-telegram"></i>
+        </div>
+        <div>
+          <h4>تلگرام</h4>
+          <p><a href="https://t.me/Mahdi_88_ai" target="_blank">@Mahdi_88_ai</a></p>
+          <small style="color: #94a3b8;">@Mahdi_88_ai</small>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div>
+          <h4>اینستاگرام</h4>
+          <p><a href="https://instagram.com/mahdiimalekpour" target="_blank">@mahdiimalekpour</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- فوتر -->
   <footer>
     <div class="container">
-      <p>© 2025 محمدمهدی ملک‌پور</p>
+      <h3>محمدمهدی ملک‌پور</h3>
+      <p>توسعه‌دهنده وب و ماشین لرنینگ</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/mahdi-malekpour" class="social-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://instagram.com/mahdiimalekpour" class="social-link" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:mahdi.me.14.m@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://t.me/Mahdi_88_ai" class="social-link" target="_blank">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </div>
+      
+      <p style="margin-top: 1.5rem; opacity: 0.8; font-size: 0.9rem;">
+        © ۱۴۰۴
+      </p>
     </div>
   </footer>
+
+  <script>
+    // اسکرول نرم برای لینک‌ها
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // تگ‌های مهارت‌ها روی موبایل بهتر نمایش داده بشن
+    function adjustSkillTags() {
+      const skillTags = document.querySelectorAll('.skill-tags');
+      if(window.innerWidth < 768) {
+        skillTags.forEach(tags => {
+          tags.style.justifyContent = 'center';
+        });
+      }
+    }
+    
+    // اجرا هنگام لود و تغییر سایز
+    window.addEventListener('load', adjustSkillTags);
+    window.addEventListener('resize', adjustSkillTags);
+  </script>
 </body>
 </html>
