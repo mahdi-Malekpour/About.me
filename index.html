@@ -9,10 +9,16 @@
 <link rel="shortcut icon" href="profile-img.ico" type="image/x-icon">
 <link rel="icon" href="profile-img.ico" type="image/x-icon">
   <!-- فونت -->
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
+/* به جای لینک CDN، فایل فونت رو دانلود و داخل پروژه قرار بده */
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('Vazir-Light.ttf');
+
+}
     /* Reset ساده */
     * {
       margin: 0;
@@ -21,7 +27,7 @@
     }
     
     body {
-      font-family: Vazir, sans-serif;
+      font-family:Vazir , sans-serif;
       background: #f8fafc;
       color: #334155;
       line-height: 1.6;
@@ -71,8 +77,8 @@
     }
     
     .profile-img {
-      width: 180px;
-      height: 180px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
@@ -339,7 +345,7 @@
   <section class="hero">
     <div class="container hero-content">
       <!-- عکس پروفایل جدید خودت رو اینجا قرار بده -->
-      <img src="profile-img.jpg" alt="محمدمهدی ملک‌پور" class="profile-img">
+      <img src="Prof_image.jpg" alt="محمدمهدی ملک‌پور" class="profile-img">
       
       <h1>محمدمهدی ملک‌پور</h1>
       <p class="title">توسعه‌دهنده وب و ماشین لرنینگ</p>
@@ -519,7 +525,15 @@
           <small style="color: #94a3b8;">@Mahdi_88_ai</small>
         </div>
       </div>
-      
+      <div class="contact-item">
+  <div class="contact-icon">
+    <i class="fas fa-comment"></i>
+  </div>
+  <div>
+    <h4>روبیکا</h4>
+    <p><a href="https://rubika.ir/frontend_web" target="_blank">@frontend_web</a></p>
+  </div>
+</div>
       <div class="contact-item">
         <div class="contact-icon">
           <i class="fab fa-instagram"></i>
